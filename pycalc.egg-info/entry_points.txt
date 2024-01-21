@@ -1,0 +1,2 @@
+[console_scripts]
+rplife = pycalc.__main__:main
