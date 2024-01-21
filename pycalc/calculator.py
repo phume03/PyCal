@@ -1,6 +1,6 @@
 # 1. Import QApplication, and all the required widgets
 import sys
-from PyQt6.QtWidgets import QApplication, QLabel, QWidget
+from PyQt6.QtWidgets import QApplication, QLabel, QHBoxLayout, QPushButton, QWidget
 
 """PyCalc is a simple calculator built with Python and PyQt.
 
@@ -21,9 +21,18 @@ app = QApplication(sys.argv)
 # 3. Create your application's GUI
 window = QWidget()
 window.setWindowTitle("PyCalc")
-window.setGeometry(100, 100, 280, 80)
-helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window)
-helloMsg.move(60, 15)
+window.setGeometry(100, 100, 280, 100)
+
+#helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window)
+#helloMsg.move(60, 15)
+
+layout = QHBoxLayout()
+layout.addWidget(QPushButton("Left"))
+layout.addWidget(QPushButton("Center"))
+layout.addWidget(QPushButton("Right"))
+window.setLayout(layout)
+
+
 
 # 4.Show your application's GUI
 window.show()
