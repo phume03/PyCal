@@ -1,6 +1,6 @@
 # 1. Import QApplication, and all the required widgets
 import sys
-from PyQt6.QtWidgets import QApplication, QLabel, QHBoxLayout, QPushButton, QWidget
+from PyQt6.QtWidgets import QApplication, QLabel, QHBoxLayout, QPushButton, QWidget, QVBoxLayout
 
 """PyCalc is a simple calculator built with Python and PyQt.
 
@@ -23,14 +23,18 @@ window = QWidget()
 window.setWindowTitle("PyCalc")
 window.setGeometry(100, 100, 280, 100)
 
-#helloMsg = QLabel("<h1>Hello, World!</h1>", parent=window)
-#helloMsg.move(60, 15)
+vlayout = QVBoxLayout()
+helloMsg = QLabel("<h1>Hello, World!</h1>")
+vlayout.addWidget(helloMsg)
 
-layout = QHBoxLayout()
-layout.addWidget(QPushButton("Left"))
-layout.addWidget(QPushButton("Center"))
-layout.addWidget(QPushButton("Right"))
-window.setLayout(layout)
+# QVBoxLayout refuses to take another layout widget as a parameter, so the code below breaks
+#hlayout = QHBoxLayout()
+#hlayout.addWidget(QPushButton("Left"))
+#hlayout.addWidget(QPushButton("Center"))
+#hlayout.addWidget(QPushButton("Right"))
+
+#vlayout.addWidget(hlayout)
+window.setLayout(vlayout)
 
 
 
