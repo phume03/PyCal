@@ -3,8 +3,12 @@ README.md
 pyproject.toml
 pycalc/__init__.py
 pycalc/__main__.py
+pycalc/about.py
+pycalc/calculator.py
+pycalc/circuits.py
 pycalc/cli.py
-pycalc/pycalc.py
+pycalc/cpu.py
+pycalc/window.py
 pycalc.egg-info/PKG-INFO
 pycalc.egg-info/SOURCES.txt
 pycalc.egg-info/dependency_links.txt
