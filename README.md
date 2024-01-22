@@ -20,8 +20,8 @@ The current folder, `materials-pyqt-calculator/`, hosts two subfolders:
 For PyCalc to work, you need to have [Python](https://www.python.org) >= 3.6.1. Then you need to install the PyQt6 library. You can do this by using `pip` in a Python virtual environment:
 
 ```console
-$ python -m venv venv
-$ source venv/bin/activate
+$ python -m venv devenv
+$ source devenv/bin/activate
 $ python -m pip install pyqt6
 ```
 

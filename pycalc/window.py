@@ -47,25 +47,7 @@ class Window(QMainWindow):
         self.setFixedSize(self.WINDOW_WIDTH, self.WINDOW_HEIGHT)
         centralWidget = QWidget(self)
         self.generalLayout = QVBoxLayout()
-
-        """
-        layout = QGridLayout()
-        self.helloMsg = QLabel("<h1>Hello, World!</h1>")
-        layout.addWidget(self.helloMsg, 0, 0, 1, 3)
         
-        left = QPushButton("Left")
-        left.clicked.connect(partial(self.button_clicked, "Left"))
-        layout.addWidget(left, 2, 0)
-
-        center = QPushButton("Center")
-        center.clicked.connect(partial(self.button_clicked, "Center"))
-        layout.addWidget(center, 2, 1)
-
-        right = QPushButton("Right")
-        right.clicked.connect(partial(self.button_clicked, "Right"))
-        layout.addWidget(right, 2, 2)
-        """
-
         centralWidget.setLayout(self.generalLayout)
         self.setCentralWidget(centralWidget)
 
@@ -85,6 +67,8 @@ class Window(QMainWindow):
 
         Parameters
         ----------
+        QMainWindow - A main window widget, allows the application to generate a main window–style app
+                     as opposed to a dialog style app.
         inputData - data from the clicked object
 
         Returns
