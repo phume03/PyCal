@@ -1,7 +1,7 @@
 # 1. Import QApplication, and all the required widgets
 import sys
 from PyQt6.QtWidgets import QApplication
-from pycalc import window
+from pycalc import window, cpu, circuits
 
 """PyCalc is a simple calculator built with Python and PyQt.
 
@@ -20,10 +20,13 @@ def main():
     app = QApplication(sys.argv)
 
     # 3. Create your application's GUI
-    win = window.Window()
+    displayInterface = window.Window()
 
-    # 4.Show your application's GUI
-    win.show()
+    # 4. a.Show your application's GUI
+    displayInterface.show()
+
+    # 4. b. connect the display interface, the controller logic, and the cpu/business logic of the application
+    circuits.PyCalc(model=cpu.evaluateExpression, view=displayInterface)
     
     # 5. Run your application's event loop
     sys.exit(app.exec())

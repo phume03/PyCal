@@ -47,3 +47,7 @@ class Window(QDialog):
         )
         dialogLayout.addWidget(buttons)
         self.setLayout(dialogLayout)
+
+
+
+      

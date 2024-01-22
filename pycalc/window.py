@@ -2,8 +2,6 @@ from PyQt6.QtWidgets import QApplication, QLineEdit, QVBoxLayout, QMainWindow, Q
 from PyQt6.QtCore import Qt
 from functools import partial
 
-ERROR_MSG = "ERROR"
-
 class Window(QMainWindow):
     """PyCalc window or elements layout class.
 
@@ -208,3 +206,50 @@ class Window(QMainWindow):
 
         self.generalLayout.addLayout(buttonsLayout)
         pass
+
+    def setDisplayText(self, UserInput: str):
+        """Set the display's text.
+    
+        Set the text on the display screen for the user.
+
+        Parameters
+        ----------
+        QMainWindow - A main window widget, which is where all components are initially placed/created.
+        UserInput   - Text to display on the calculator display component.
+
+        Returns
+        -------
+        none
+        """ 
+        self.display.setText(UserInput)
+        self.display.setFocus()
+
+    def displayText(self):
+        """Get the display's text.
+    
+        Retrieve the text presently displayed by the calculator display component.
+
+        Parameters
+        ----------
+        QMainWindow - A main window widget, which is where all components are initially placed/created.
+
+        Returns
+        -------
+        Display Text - the text currently displayed by the calculator display screen.
+        """ 
+        return self.display.text()
+
+    def clearDisplay(self):
+        """Clear the display.
+
+        Clear the display component of the calculator.
+
+        Parameters
+        ----------
+        QMainWindow - A main window widget, which is where all components are initially placed/created.
+
+        Returns
+        -------
+        none
+        """ 
+        self.setDisplayText("")    

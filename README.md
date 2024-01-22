@@ -43,7 +43,7 @@ To use PyCalc, just enter a valid math expression using your mouse and then pres
 
 ## About the Author
 
-PyCalc is originally developed by Leodanis Pozo Ramos is a **self-taught Python Developer, and [content creator](https://realpython.com/team/lpozoramos/)** at Real Python. It is edited by Phumelela Mdluli while learning from and using RealPython to learn.
+PyCalc is originally developed by Leodanis Pozo Ramos is a **self-taught Python Developer, and [content creator](https://realpython.com/team/lpozoramos/)** at Real Python. It is edited by Phumelela Mdluli while learning from or using RealPython to learn.
 
 ## Resources
 
